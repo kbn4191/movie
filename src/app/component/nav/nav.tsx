@@ -27,7 +27,7 @@ export default function Navigation() {
     }
   };
 
-  //const offset=window.addEventListener("scroll", chnageNavBagckground);
+  window.addEventListener("scroll", chnageNavBagckground);
 
   return (
     <>
