@@ -1,0 +1,15 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./src/app/component/productionSection/production.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+.production_imageContainer__eTUyt {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .production_image__nQMvP {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  .production_imageContainer__eTUyt:hover .production_image__nQMvP {
+    transform: scale(1.2);
+  }

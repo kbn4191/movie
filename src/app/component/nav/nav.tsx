@@ -27,7 +27,7 @@ export default function Navigation() {
     }
   };
 
-  //const offset=window.addEventListener("scroll", chnageNavBagckground);
+//window.addEventListener("scroll", chnageNavBagckground);
 
   return (
     <>
@@ -35,7 +35,8 @@ export default function Navigation() {
         <Box display={{ xs: "none", md: "block" }}>
           <nav
             className={Style.nav}
-            style={{ backgroundColor: scrolled ? "#3498DB" : "" }}>
+            style={{ backgroundColor: scrolled ? "#3498DB" : "" }}
+            >
             <Container>
               <Box
                 display={"flex"}
