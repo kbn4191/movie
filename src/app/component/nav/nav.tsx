@@ -27,7 +27,11 @@ export default function Navigation() {
     }
   };
 
+<<<<<<< HEAD
 //window.addEventListener("scroll", chnageNavBagckground);
+=======
+  //window.addEventListener("scroll", chnageNavBagckground);
+>>>>>>> e18640b4322e0cd8217858ed461b6437eb154ed0
 
   return (
     <>
