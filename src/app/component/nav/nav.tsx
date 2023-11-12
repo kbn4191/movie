@@ -19,7 +19,7 @@ export default function Navigation() {
   const toggleDrawer = (open: any) => () => {
     setDrawerOpen(open);
   };
-  const chnageNavBagckground = () => {
+  const changeNavBackground = () => {
     if (window.scrollY >= 300) {
       setIsScrolled(true);
     } else {
@@ -27,7 +27,14 @@ export default function Navigation() {
     }
   };
 
-  //const offset=window.addEventListener("scroll", chnageNavBagckground);
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBackground);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', changeNavBackground);
+    };
+  }, []); // Empty dependency array to run the effect only once during mount
 
   return (
     <>
