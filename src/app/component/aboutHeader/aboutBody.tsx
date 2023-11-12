@@ -38,10 +38,10 @@ export default function AboutBody() {
                 >About</Typography>
             </Box>
 
-            <Typography color={"#2C3E50"} mt={5}>
+            <Typography color={"#2C3E50"} mt={5} lineHeight={"190%"}>
                 {brief}
             </Typography>
-            <Typography color={"#2C3E50"} mt={5}>
+            <Typography color={"#2C3E50"} mt={5}  lineHeight={"190%"}>
                 {brifParagraphy}
             </Typography>
         </Container>
