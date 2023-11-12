@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
 import { AppBar, Box, Container, Drawer } from "@mui/material";
 import Style from "../nav/nav.module.css";
