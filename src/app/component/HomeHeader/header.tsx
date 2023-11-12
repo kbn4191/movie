@@ -82,7 +82,23 @@ export default function HomeHeader() {
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    color={"#3498DB"}>
+                    color={"#3498DB"}
+                    sx={{
+                      animation:"bounce 1s infinite"
+                      ,
+        '@keyframes bounce': {
+          '0%, 20%, 50%, 80%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '40%': {
+            transform: 'translateY(-20px)',
+          },
+          '60%': {
+            transform: 'translateY(-10px)',
+          },
+        },
+                    }}
+                    >
                     <SouthIcon />
                   </Box>
                 </Box>
