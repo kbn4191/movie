@@ -119,9 +119,8 @@ export default function Navigation() {
         onClose={toggleDrawer(false)}
         style={{ zIndex: 1100 }}
         PaperProps={{ style: { width: "50%" } }}>
-          <Box height={63} width={"100%"} bgcolor={"#3498DB"}>
-
-</Box>
+          <Box height={63} width={"100%"} bgcolor={"#3498DB"}></Box>
+          <Container>
         <Box
           display={"flex"}
           flexDirection={"column"}
@@ -144,6 +143,7 @@ export default function Navigation() {
            
           ))}
         </Box>
+        </Container>
       </Drawer>
     </>
   );

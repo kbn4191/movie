@@ -198,6 +198,12 @@ a {
   border-radius: 5px;
 
 }
+.defaultMobile{
+  background-color: rgba(235, 235, 235, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+
+}
 .default:hover{
   background-color: rgba(235, 235, 235, 0.404);
   padding: 5px 10px;
