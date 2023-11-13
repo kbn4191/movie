@@ -14,7 +14,7 @@ export default function Footer() {
           md:"0px 16px",
           xs:"0px 0px"
         }}}>
-          <Box mt={20}>
+          <Box mt={0}>
             <Grid container spacing={{xs:0, md:2}}>
               <Grid md={3} xs={12}>
                 <Box

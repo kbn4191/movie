@@ -10,7 +10,7 @@ export default function Production() {
   return (
    
     <>
-      <Box>
+      <Box mb={20}>
         <Container>
           <Box mt={10} display={"flex"} justifyContent={"center"}>
             <Box>
