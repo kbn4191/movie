@@ -69,7 +69,7 @@ export default function CustomizedAccordions() {
             <Grid container spacing={3} key={cv.id}>
                   <Grid md={3} xs={12}>
                     <Box mt={5}>
-                      <Typography ml={3} color={"#2C3E50"} fontWeight={550}>
+                      <Typography ml={3} color={"#2C3E50"} fontWeight={550}lineHeight={"180%"}>
                        {cv.Portfolio}
                       </Typography>
                    
@@ -77,7 +77,7 @@ export default function CustomizedAccordions() {
                     </Grid>
                     <Grid md={9} xs={12}>
                     <Box mt={5} >
-                    <Typography ml={3}>
+                    <Typography ml={3} lineHeight={"180%"}>
                  {cv.Description}
             
                 </Typography>
