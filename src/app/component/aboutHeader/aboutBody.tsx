@@ -1,4 +1,5 @@
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, Divider } from "@mui/material";
+import CustomizedAccordions from "../Accordian/accordain";
 export default function AboutBody() {
     const brief =`Glen Charles Landry has worked in film, tv or theatres for over 20 years. 
     He is a graduate of the prestigious National Theatre School of Canada. On his very first 
@@ -38,12 +39,14 @@ export default function AboutBody() {
                 >About</Typography>
             </Box>
 
-            <Typography color={"#2C3E50"} mt={5} lineHeight={"190%"}>
+            <Typography color={"#2C3E50"} mt={5} lineHeight={"190%"} textAlign={"justify"}>
                 {brief}
             </Typography>
-            <Typography color={"#2C3E50"} mt={5}  lineHeight={"190%"}>
+            <Typography color={"#2C3E50"} mt={5}  lineHeight={"190%"} textAlign={"justify"}>
                 {brifParagraphy}
             </Typography>
+            <Divider sx={{mt:10, mb:5}}/>
+            <CustomizedAccordions/>
         </Container>
         </>
 
