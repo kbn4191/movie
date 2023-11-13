@@ -3,29 +3,25 @@ import HeaderImg from "../../images/HomeHeaderImg.png";
 import HeaderMobileBg from "../../images/HomeMobileHeaderBg.png";
 import ButtonIcon from "../btn/btn";
 import SouthIcon from "@mui/icons-material/South";
+import Image from "next/image";
 export default function HomeHeader() {
   return (
     <>
-      <Box
-        sx={{
-          backgroundImage: {
-            md: `url(${HeaderImg.src})`,
-            xs: `url(${HeaderMobileBg.src})`,
-          },
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          paddingTop: "200px",
-          paddingBottom: "100px",
-        }}>
-        <Container>
+      <Box>
+         <Image priority src={HeaderImg} layout="fill" objectFit="cover" objectPosition="center" alt="background image"
+         style={{zIndex:"0",}}
+         
+         />
+        <Container >
           <Box
             sx={{
               marginLeft: {
                 md: 10,
                 xs: 3,
               },
-            }}>
+              position:"relative",
+              zIndex:"1"
+            }} mt={40}>
             <Grid container spacing={2}>
               <Grid md={6} xs={12}>
                 <Box>

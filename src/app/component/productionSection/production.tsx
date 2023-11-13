@@ -10,9 +10,9 @@ export default function Production() {
   return (
    
     <>
-      <Box mb={20}>
+      <Box mb={20} >
         <Container>
-          <Box mt={10} display={"flex"} justifyContent={"center"}>
+          <Box mt={{md:20, xs:30}} display={"flex"} justifyContent={"center"}>
             <Box>
             <Typography fontSize={40} fontWeight={700} color={"#2C3E50"}>Featured Designs</Typography>
             <Box bgcolor={"#2ECC71"} padding={"12px 10px"} width={256}>
@@ -27,7 +27,8 @@ export default function Production() {
       {ProductionData.map((image) => (
         <Grid item key={image.id} xs={12} sm={6} md={4}>
           <Box component={"div"} className={Style.imageContainer} >
-          <Image src={image.img} height={368} width={377} alt="" className={Style.image}></Image>
+          <Image src={image.img} height={368} width={377} alt="" className={Style.image} priority  placeholder="blur"
+      quality={100}></Image>
 
           </Box>
          
