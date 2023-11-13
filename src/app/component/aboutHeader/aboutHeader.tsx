@@ -1,6 +1,7 @@
 import { Box, Container, Typography, Grid } from "@mui/material";
 import HeaderAboutDesktopbg from "../../images/aboutbgheader.png";
 import Lane from "../../images/lane.png";
+import LaneMobile from "../../images/laneMobile.png";
 import Image from "next/image";
 import ButtonIcon from "../btn/btn";
 export default function AboutHeader() {
@@ -20,7 +21,7 @@ export default function AboutHeader() {
         <Container>
           <Grid container spacing={2}>
             <Grid md={6} xs={12}>
-              <Box mt={20} ml={10}>
+              <Box mt={{md:20, xs:10}} ml={{md:10, xs:3}} paddingBottom={{md:0, xs:10}}>
                 <Typography
                   fontWeight={700}
                   lineHeight={"102.023%"}
@@ -40,14 +41,21 @@ export default function AboutHeader() {
                 <ButtonIcon/>
               </Box>
             </Grid>
-            <Grid md={6} xs={12}>
+            <Grid md={6} xs={12} display={{md:"block", xs:"none"}}>
               <Box>
                 <Image src={Lane} height={453} width={553} alt="lane" style={{mixBlendMode:"luminosity"}} />
               </Box>
             </Grid>
           </Grid>
+          
+
         </Container>
       </Box>
+      <Container>
+      <Box display={"flex"} justifyContent={"center"} mt={8}>
+            <Image src={LaneMobile} height={247} width={276} alt=""/>
+          </Box>
+      </Container>
     </>
   );
 }
