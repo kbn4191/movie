@@ -52,7 +52,7 @@ export default function AboutHeader() {
         </Container>
       </Box>
       <Container>
-      <Box display={"flex"} justifyContent={"center"} mt={8}>
+      <Box display={"flex"} justifyContent={"center"} mt={8} sx={{display:{md:"none", xs:"block"}}}>
             <Image src={LaneMobile} height={247} width={276} alt=""/>
           </Box>
       </Container>
