@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Grid } from "@mui/material";
 import HeaderAboutDesktopbg from "../../images/aboutbgheader.png";
+import HeaderAboutMobile from "../../images/aboutbgimgmobile.png";
 import Lane from "../../images/lane.png";
 import LaneMobile from "../../images/laneMobile.png";
 import Image from "next/image";
@@ -8,12 +9,20 @@ export default function AboutHeader() {
   return (
     <>
       <Box>
-           <Image priority src={HeaderAboutDesktopbg} layout="fill" objectFit="cover" objectPosition="center" alt="background image"
-         style={{zIndex:"0", }}
+          
+         <Box display={{md:"block", xs:"none"}}>
+         <Image priority src={HeaderAboutDesktopbg} layout="fill" objectFit="cover" objectPosition="center" alt="background image"
+         style={{zIndex:"0", }} />
+
+         </Box>
+         <Box display={{md:"none", xs:"block"}} height={200}>
+         <Image priority src={HeaderAboutMobile} width={899} height={345} objectFit="cover" objectPosition="center" alt="background image"
+         style={{zIndex:"0", }} />
+
+         </Box>
          
-         />
         <Container>
-          <Grid container spacing={2} sx={{zIndex:"1", position:"relative"}} mt={23}>
+          <Grid container spacing={2} sx={{zIndex:"1", position:"relative"}} mt={{md:23, xs:-15}}>
             <Grid md={6} xs={12}>
               <Box mt={{md:20, xs:10}} ml={{md:10, xs:3}} paddingBottom={{md:0, xs:10}}>
                 <Typography
@@ -46,7 +55,7 @@ export default function AboutHeader() {
         </Container>
       </Box>
       <Container>
-      <Box display={"flex"} justifyContent={"center"} mt={29} sx={{display:{md:"none", xs:"flex"}}}>
+      <Box display={"flex"} justifyContent={"center"} mt={10} sx={{display:{md:"none", xs:"flex"}}}>
             <Image src={LaneMobile} height={247} width={276} alt="" priority/>
           </Box>
       </Container>
