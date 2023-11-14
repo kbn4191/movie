@@ -7,19 +7,13 @@ import ButtonIcon from "../btn/btn";
 export default function AboutHeader() {
   return (
     <>
-      <Box
-        sx={{
-          backgroundImage: {
-            md: `url(${HeaderAboutDesktopbg.src})`,
-            xs: `url(${HeaderAboutDesktopbg.src})`,
-          },
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          paddingTop: "100px",
-        }}>
+      <Box>
+           <Image priority src={HeaderAboutDesktopbg} layout="fill" objectFit="cover" objectPosition="center" alt="background image"
+         style={{zIndex:"0", }}
+         
+         />
         <Container>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} sx={{zIndex:"1", position:"relative"}} mt={23}>
             <Grid md={6} xs={12}>
               <Box mt={{md:20, xs:10}} ml={{md:10, xs:3}} paddingBottom={{md:0, xs:10}}>
                 <Typography
@@ -43,7 +37,7 @@ export default function AboutHeader() {
             </Grid>
             <Grid md={6} xs={12} display={{md:"block", xs:"none"}}>
               <Box>
-                <Image src={Lane} height={453} width={553} alt="lane" style={{mixBlendMode:"luminosity"}} />
+                <Image src={Lane} height={453} width={553} alt="lane" style={{mixBlendMode:"luminosity"}}  priority />
               </Box>
             </Grid>
           </Grid>
@@ -52,8 +46,8 @@ export default function AboutHeader() {
         </Container>
       </Box>
       <Container>
-      <Box display={"flex"} justifyContent={"center"} mt={8} sx={{display:{md:"none", xs:"block"}}}>
-            <Image src={LaneMobile} height={247} width={276} alt=""/>
+      <Box display={"flex"} justifyContent={"center"} mt={29} sx={{display:{md:"none", xs:"flex"}}}>
+            <Image src={LaneMobile} height={247} width={276} alt="" priority/>
           </Box>
       </Container>
     </>
