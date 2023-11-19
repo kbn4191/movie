@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
 import { AppBar, Box, Container, Drawer } from "@mui/material";
 import Style from "../nav/nav.module.css";
@@ -9,8 +9,6 @@ import Logo from "../../images/logo.png";
 import LogoMobile from "../../images/mobileLogo.png";
 import { Menu } from "./navBarDetails";
 import { useRouter } from "next/router";
-import ButtonIcon from "../btn/btn";
-import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 
 
 export default function Navigation() {
@@ -21,7 +19,7 @@ export default function Navigation() {
   const toggleDrawer = (open: any) => () => {
     setDrawerOpen(open);
   };
-  const chnageNavBagckground = () => {
+  const changeNavBackground = () => {
     if (window.scrollY >= 300) {
       setIsScrolled(true);
     } else {
@@ -29,7 +27,14 @@ export default function Navigation() {
     }
   };
 
-  //const offset=window.addEventListener("scroll", chnageNavBagckground);
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBackground);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', changeNavBackground);
+    };
+  }, []); // Empty dependency array to run the effect only once during mount
 
   return (
     <>
@@ -37,7 +42,8 @@ export default function Navigation() {
         <Box display={{ xs: "none", md: "block" }}>
           <nav
             className={Style.nav}
-            style={{ backgroundColor: scrolled ? "#3498DB" : "" }}>
+            style={{ backgroundColor: scrolled ? "#3498DB" : "" }}
+            >
             <Container>
               <Box
                 display={"flex"}
@@ -111,16 +117,21 @@ export default function Navigation() {
         anchor="left"
         open={drawerOpen}
         onClose={toggleDrawer(false)}
-        style={{ zIndex: 1100 }}
-        PaperProps={{ style: { width: "100%",  } }}>
-          <Box height={63} width={"100%"} bgcolor={"#3498DB"}>
-
-</Box>
+        style={{ zIndex: 1100,  }}
+        PaperProps={{ style: { width: "50%" } }}
+        sx={{display:{
+          md:"none",
+          xs:"block"
+        }}}
+        
+        >
+          <Box height={63} width={"100%"} bgcolor={"#3498DB"}></Box>
+          <Container>
         <Box
           display={"flex"}
           flexDirection={"column"}
           gap={3}
-          sx={{ padding: "30px 0px", alignItems:"center" }}>
+          sx={{ padding: "30px 0px" }}>
           {Menu.map((menu) => (
            
               
@@ -137,23 +148,8 @@ export default function Navigation() {
               </Link>
            
           ))}
-           <ButtonIcon></ButtonIcon>
-           <Box height={50} 
-           width={50} 
-           borderRadius={20} 
-           border={"1px solid gray"} 
-           mt={10} 
-           color={"#3498DB"}
-           justifyContent={"center"}
-           alignItems={"Center"}
-           display={"flex"}
-           onClick={toggleDrawer(false)}
-           >
-            <ClearRoundedIcon/>
-
-           </Box>
         </Box>
-       
+        </Container>
       </Drawer>
     </>
   );
