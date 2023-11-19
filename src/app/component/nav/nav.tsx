@@ -9,6 +9,7 @@ import Logo from "../../images/logo.png";
 import LogoMobile from "../../images/mobileLogo.png";
 import { Menu } from "./navBarDetails";
 import { useRouter } from "next/router";
+import ButtonIcon from "../btn/btn";
 import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 
 
