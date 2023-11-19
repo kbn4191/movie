@@ -9,6 +9,7 @@ import Logo from "../../images/logo.png";
 import LogoMobile from "../../images/mobileLogo.png";
 import { Menu } from "./navBarDetails";
 import { useRouter } from "next/router";
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 
 
 export default function Navigation() {
@@ -118,7 +119,7 @@ export default function Navigation() {
         open={drawerOpen}
         onClose={toggleDrawer(false)}
         style={{ zIndex: 1100,  }}
-        PaperProps={{ style: { width: "50%" } }}
+        PaperProps={{ style: { width: "100%" } }}
         sx={{display:{
           md:"none",
           xs:"block"
@@ -131,7 +132,7 @@ export default function Navigation() {
           display={"flex"}
           flexDirection={"column"}
           gap={3}
-          sx={{ padding: "30px 0px" }}>
+          sx={{ padding: "30px 0px", alignItems:"center" }}>
           {Menu.map((menu) => (
            
               
@@ -148,6 +149,21 @@ export default function Navigation() {
               </Link>
            
           ))}
+           <ButtonIcon></ButtonIcon>
+           <Box height={50} 
+           width={50} 
+           borderRadius={20} 
+           border={"1px solid gray"} 
+           mt={10} 
+           color={"#3498DB"}
+           justifyContent={"center"}
+           alignItems={"Center"}
+           display={"flex"}
+           onClick={toggleDrawer(false)}
+           >
+            <ClearRoundedIcon/>
+
+           </Box>
         </Box>
         </Container>
       </Drawer>
